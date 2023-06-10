@@ -41,7 +41,7 @@ jobs:
           push: true
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          tags: qthompson/kanban-app:latest
+          tags: "${{ vars.ARTIFACT_REGISTRY_HOSTNAME }}/true-harmony-389420/kanban/kanban-app:latest"
           
 
       - name: Build and push kanban ui
@@ -51,4 +51,4 @@ jobs:
           push: true
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          tags: qthompson/kanban-ui:latest
+          tags: "${{ vars.ARTIFACT_REGISTRY_HOSTNAME }}/true-harmony-389420/kanban/kanban-ui:latest"
