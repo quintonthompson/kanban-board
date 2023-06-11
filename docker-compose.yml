@@ -21,7 +21,7 @@ services:
         - linux/arm64"
     container_name: kanban-app
     environment:
-      - DB_URL=kanban-postgres/kanban
+      - DB_URL=jdbc:postgresql://127.0.0.1/kanban
       - DB_SERVER=kanban-postgres
       - POSTGRES_DB=kanban
       - POSTGRES_USER=kanban
@@ -45,3 +45,5 @@ services:
 
 volumes:
   kanban-data:
+
+
